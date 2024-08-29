@@ -1,16 +1,13 @@
 name: CI/CD
-
 on:
   push:
     branches: [ main ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [19.x]
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
